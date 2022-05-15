@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+       当a为undefined的时候就会启用默认值
+    */
+    function fun1(a=10,b){
+        console.log(a,b)
+    }
+
+
+    fun1(null,20)//null,20
+    fun1("",20)//"",20
+    fun1(30,20)//30,20
+    fun1(undefined,20)//10,20
+</script>
+</html>

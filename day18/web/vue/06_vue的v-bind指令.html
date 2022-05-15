@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<!--
+      第一种方式:  v-bind:属性="属性值"
+      第二种方式:  :属性="属性值"
+  -->
+    <div id="app">
+        <img v-bind:src="s" :width="w" :height="h">
+        <p :style="s1"></p>
+        <a :href="http">点点</a>
+        <input v-model="http">
+    </div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            w:"200px",
+            h:"200px",
+            s:"../img/2022.jpg",
+            s1:"width:200px;height:200px;background-color:red;",
+            http:"https://www.baidu.com"
+        }
+    })
+</script>
+</html>

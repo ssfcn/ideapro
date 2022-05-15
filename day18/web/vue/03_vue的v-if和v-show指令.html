@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<style>
+    #p1{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+    #p2{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+    }
+</style>
+<body>
+<!--
+    v-if   取值为false 删除 true不删除
+    v-show 取值为false 隐藏 true 显示
+
+ -->
+<div id="ppp">
+    <p id="p1" v-show="f1"></p>
+    <p id="p2" v-if="f2"></p>
+</div>
+
+</body>
+<script>
+    new Vue({
+        el:"#ppp",
+        data:{
+            f1:true,
+            f2:true
+        }
+    })
+</script>
+</html>

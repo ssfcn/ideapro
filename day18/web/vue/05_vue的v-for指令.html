@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<!--
+     v-for  循环数组、集合或者json对象
+        语法
+            数组和集合循环
+                 (元素,index) in 集合
+            对象
+                 (value,key,index) in 对象
+
+  -->
+<div id="app">
+    <ul>
+        <li v-for="(n,i) in nameArray">{{n}}{{i}}</li>
+        <li v-for="(u,i) in userList">{{u.name}}{{u.age}}{{i}}</li>
+
+    </ul>
+    <ul>
+        <li v-for="(u,i) in userList">{{u.name}}{{u.age}}{{i}}</li>
+
+    </ul>
+    <ul>
+        <li v-for="(v,k,i) in user">{{v}}{{k}}{{i}}</li>
+    </ul>
+</div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            /* json数组 */
+            nameArray: ["张飞", "关羽", "黄忠", "赵云"],
+            /* 对象数组 */
+            userList: [{"name": "猪八戒", "age": 18}, {"name": "小白驴", "age": 19}, {"name": "铁扇公主", "age": 20}],
+            /* json对象 */
+            user: {"sid": 1001, "name": "猪八戒", "sex": "男", "hobby": "娘子", "sdesc": "比较好色"}
+        }
+    })
+</script>
+</html>

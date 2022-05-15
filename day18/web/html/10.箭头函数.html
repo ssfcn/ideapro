@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<!--/*-->
+<!--()里面写形参 无论是否有参数其都不可省略-->
+<!--{}方法体  当方法体中的内容只有一行的时候 {}可以省略-->
+<!--return 当方法体中的内容只有一行的时候 return 也可以省略-->
+<!--*/-->
+
+<script>
+    /*
+         1、函数的()无论是否有参数都不可省略
+         2、如果函数体中只有一行代码 {}可以省略
+         3、如果函数体中只有一行代码并且有返回值的 return 也可以省略
+    */
+
+    //无参无返回值函数
+   var fun1=function (){
+       console.log(fun1)
+   }
+
+    fun1()
+    //箭头函数
+    var f1=()=>console.log(f1)
+    //有参无返回值的
+    var fun2=function(a,b){
+        console.log(a+b)
+    }
+
+    fun2(5,6)
+    //箭头函数
+    var f2 = (a,b)=>console.log(a+b)
+    f2(3,4)
+    //无参有返回值
+    var fun3=function(){
+        var a =10,b=20
+        return a+b
+    }
+
+    console.log(fun3())//30
+    //箭头函数
+
+    var  f3 =()=>{
+        var a =11,b=21
+        return a+b
+    }
+    console.log(f3())//32
+
+    //有参有返回值
+    var  fun4 =function(a,b){
+        return a+b;
+    }
+    console.log(fun4(4,5))//9
+    //箭头函数
+    var f4=(a,b)=>a+b
+    console.log(f4(3,7))//10
+</script>
+</html>

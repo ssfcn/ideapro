@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  /*
+     求n个数的累加和
+        不定参数就可以看作是一个数组
+  */
+  function getSum(...a){
+
+    var sum =0
+    for(var i=0;i<a.length;i++){
+      sum+=a[i]
+    }
+
+    console.log(sum)
+  }
+
+  getSum(10,20)
+  getSum(10,20,30)
+  getSum(10,20,30,40)
+  getSum(10,20,30,40,100)
+
+</script>
+</html>

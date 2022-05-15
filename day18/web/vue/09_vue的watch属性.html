@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    用户名:<input type="text" v-model="username">
+    {{username}}
+</div>
+
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            username:''
+        },
+        watch:{
+            /*
+            监控username的属性变化
+              newV1:用户名新添加的value属性值
+              oldV2:用户名老的value属性值
+        */
+            username(newV1,oldV1){
+                console.log(newV1+"\t"+oldV1)
+            }
+        }
+    })
+</script>
+</html>

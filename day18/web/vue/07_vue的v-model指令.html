@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<!--
+     v-model指令 双向绑定
+         应用场景:在表单填写数据需要将数据通过ajax的方式发送到后台时候使用
+         1、修改视图能够影响到模型数据 2、修改模型中的数据视图中的数据也
+         会受到影响
+
+  -->
+<div id="app">
+    用户名：<input type="text" v-model="username" @blur="fun1">
+    <ul>
+        <li>
+            {{username}}
+
+        </li>
+    </ul>
+</div>
+
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            username: ''
+        },
+        methods: {
+            fun1() {
+                console.log(this.username)
+            }
+        }
+
+    })
+</script>
+</html>

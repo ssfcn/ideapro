@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+{{getTime}}
+</div>
+
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            num:241223546123
+        },
+        computed:{
+            getTime(){
+                return new Date(this.num).getFullYear()+"-"+(new Date(this.num).getMonth()+1)+"-"+new Date(this.num).getDate()
+            }
+        }
+    })
+
+</script>
+</html>
