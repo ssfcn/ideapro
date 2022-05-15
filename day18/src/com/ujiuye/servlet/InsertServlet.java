@@ -20,7 +20,7 @@ public class InsertServlet extends HttpServlet {
         Map<String, String[]> map = req.getParameterMap();
 
         Student stu = new Student();
-        //66666
+
         try {
             BeanUtils.populate(stu,map);
             int row = service.insertStu(stu);
